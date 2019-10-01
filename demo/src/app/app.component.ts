@@ -30,6 +30,7 @@ export class AppComponent {
       title: 'UI',
       links: [
         { path: '/ui/bootstrap', title: 'Bootstrap' },
+        { path: '/ui/bulma', title: 'Bulma' },
         { path: '/ui/material', title: 'Material' },
         { path: '/ui/ionic', title: 'Ionic' },
         { path: '/ui/primeng', title: 'PrimeNG' },

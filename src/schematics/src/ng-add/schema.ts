@@ -6,7 +6,7 @@ export interface Schema {
   /**
    * The UI with pre-defined types/templates
    */
-  uiTheme?: 'material' | 'bootstrap' | 'ionic' | 'primeng' | 'kendo';
+  uiTheme?: 'material' | 'bootstrap' | 'bulma' | 'ionic' | 'primeng' | 'kendo';
 
   /**
    * Name of the module to import to

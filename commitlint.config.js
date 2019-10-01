@@ -9,6 +9,7 @@ module.exports = {
         'core',
         'material',
         'bootstrap',
+        'bulma',
         'ionic',
         'primeng',
         'kendo',

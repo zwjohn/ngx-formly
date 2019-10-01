@@ -18,6 +18,9 @@ const TEMPLATE_FILES = {
   bootstrap: [
     { file: 'styles.scss', filecontent: `@import '~bootstrap/scss/bootstrap.scss';` },
   ],
+  bulma: [
+    { file: 'styles.scss', filecontent: `@import '~bulma';` },
+  ],
   material: [
     { file: 'styles.scss', filecontent: `@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';` },
   ],
@@ -71,6 +74,10 @@ const dependencies = {
     'popper.js': '^1.14',
     'jquery': '^3',
   },
+  bulma: {
+    '@ngx-formly/bulma': formlyVersion,
+    'bulma': '^0.7.5',
+  },
   material: {
     '@ngx-formly/material': formlyVersion,
   },
@@ -112,6 +119,7 @@ const dependencies = {
 
 const ngModule = {
   bootstrap: 'FormlyBootstrapModule',
+  bulma: 'FormlyBulmaModule',
   material: 'FormlyMaterialModule',
   kendo: 'FormlyKendoModule',
   primeng: 'FormlyPrimeNGModule',
@@ -155,9 +163,11 @@ export class StackblitzWriter {
 
     const options: any = { type };
 
-    if (['bootstrap', 'material', 'kendo', 'ionic', 'primeng'].indexOf(options.type) === -1) {
+    if (['bootstrap', 'bulma', 'material', 'kendo', 'ionic', 'primeng'].indexOf(options.type) === -1) {
       if (appModuleContent.indexOf('@ngx-formly/bootstrap') !== -1) {
         options.type = 'bootstrap';
+      } else if (appModuleContent.indexOf('@ngx-formly/bulma') !== -1) {
+        options.type = 'bulma';
       } else if (appModuleContent.indexOf('@ngx-formly/material') !== -1) {
         options.type = 'material';
       } else if (appModuleContent.indexOf('@ngx-formly/kendo') !== -1) {

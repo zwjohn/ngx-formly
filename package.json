@@ -12,9 +12,10 @@
     "lint:fix": "tslint --fix -p tsconfig.json",
     "commit": "npm run build && git-cz",
     "bundlesize": "npm run build && bundlesize",
-    "build": "npm run build:core && npm run build:bootstrap && npm run build:material && npm run build:ionic && npm run build:primeng && npm run build:kendo && npm run build:nativescript && npm run build:schematics && node .config/build.js",
+    "build": "npm run build:core && npm run build:bootstrap && npm run build:bulma && npm run build:material && npm run build:ionic && npm run build:primeng && npm run build:kendo && npm run build:nativescript && npm run build:schematics && node .config/build.js",
     "build:core": "ng build @ngx-formly/core",
     "build:bootstrap": "ng build @ngx-formly/bootstrap",
+    "build:bulma": "ng build @ngx-formly/bulma",
     "build:material": "ng build @ngx-formly/material",
     "build:ionic": "ng build @ngx-formly/ionic",
     "build:primeng": "ng build @ngx-formly/primeng",
@@ -102,6 +103,7 @@
     "@types/jasminewd2": "^2.0.6",
     "@types/json-schema": "^7.0.3",
     "@types/node": "^10.14.16",
+    "bulma": "^0.7.5",
     "bundlesize": "^0.17.2",
     "codecov": "^3.5.0",
     "codelyzer": "^4.5.0",
@@ -147,6 +149,10 @@
     },
     {
       "path": "./dist/@ngx-formly/bootstrap/bundles/ngx-formly-bootstrap.umd.min.js",
+      "maxSize": "5 kB"
+    },
+    {
+      "path": "./dist/@ngx-formly/bulma/bundles/ngx-formly-bulma.umd.min.js",
       "maxSize": "5 kB"
     },
     {

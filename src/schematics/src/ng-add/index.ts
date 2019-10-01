@@ -86,6 +86,7 @@ interface UIModuleName {
 function mapUIName(uiTheme: string): string {
   const uiMap: UIModuleName = {
     bootstrap: 'Bootstrap',
+    bulma: 'Bulma',
     material: 'Material',
     nativescript: 'Nativescript',
     ionic: 'Ionic',

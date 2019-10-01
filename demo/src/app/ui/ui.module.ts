@@ -9,6 +9,7 @@ import { SharedModule } from '../shared';
       { path: '', children: [
         { path: '', pathMatch: 'full', redirectTo: 'bootstrap' },
         { path: 'bootstrap', loadChildren: './ui-bootstrap/config.module#ConfigModule' },
+        { path: 'bulma', loadChildren: './ui-bulma/config.module#ConfigModule' },
         { path: 'material', loadChildren: './ui-material/config.module#ConfigModule' },
         { path: 'ionic', loadChildren: './ui-ionic/config.module#ConfigModule' },
         { path: 'primeng', loadChildren: './ui-primeng/config.module#ConfigModule' },

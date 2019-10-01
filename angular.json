@@ -198,6 +198,46 @@
         }
       }
     },
+    "@ngx-formly/bulma": {
+      "root": "src/bulma",
+      "sourceRoot": "src/bulma/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "src/bulma/tsconfig.lib.json",
+            "project": "src/bulma/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "src/bulma/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/bulma/src/test.ts",
+            "tsConfig": "src/bulma/tsconfig.spec.json",
+            "karmaConfig": "src/bulma/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "src/bulma/tsconfig.lib.json",
+              "src/bulma/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
     "@ngx-formly/ionic": {
       "root": "src/ionic",
       "sourceRoot": "src/ionic/src",
