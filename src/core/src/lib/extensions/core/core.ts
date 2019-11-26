@@ -107,7 +107,7 @@ export class CoreExtension implements FormlyExtension {
       ...field.wrappers,
       ...this.formlyConfig.templateManipulators.postWrapper.map(m => m(field)),
       ...fieldTemplateManipulators.postWrapper.map(m => m(field)),
-    ].filter((el, i, a) => el && i === a.indexOf(el));
+    ].filter((el, i, a) => el && a.indexOf(el)!==-1);
   }
 
   private getFieldComponentInstance(field: FormlyFieldConfigCache) {
